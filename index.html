@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF File Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>File Management System</h1>
+        <p class="welcome">Welcome! Upload your PDF files, and you can save, view, and delete them easily.</p>
+        
+        <form id="file-form">
+            <label for="file-input" class="file-label">Choose File</label>
+            <input type="file" id="file-input" accept=".pdf" hidden>
+            <span id="file-name" class="file-name">No file chosen</span>    
+            <button id="save-button">Upload File</button>
+        </form>
+        
+        <div class="table-wrapper">
+            <table id="file-table">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>PDF View</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="file-table-body">
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
